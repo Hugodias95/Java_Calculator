@@ -324,9 +324,9 @@ public class TelaCalc extends javax.swing.JFrame {
                                 .addComponent(jButtonMultiplicacao, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
+                .addGap(12, 12, 12))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -449,6 +449,10 @@ public class TelaCalc extends javax.swing.JFrame {
     private void jButtonVirgulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVirgulaActionPerformed
         // TODO add your handling code here:
         jTextAreaVisor.setText(jTextAreaVisor.getText()+".");
+        
+        
+        
+        
     }//GEN-LAST:event_jButtonVirgulaActionPerformed
 
     private void jButtonNum0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNum0ActionPerformed
@@ -478,6 +482,7 @@ public class TelaCalc extends javax.swing.JFrame {
 
     private void jButtonResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonResultadoActionPerformed
         // TODO add your handling code here:
+        
         calculo.setNum2(jTextAreaVisor.getText());
         jTextAreaTelaOperacoes.setText(jTextAreaTelaOperacoes.getText()+ calculo.getNum2());
         jTextAreaVisor.setText("");
@@ -504,7 +509,10 @@ public class TelaCalc extends javax.swing.JFrame {
       calculo.setCalculo(3);
       jTextAreaVisor.setText("");
       jTextAreaTelaOperacoes.setText(calculo.getNum1() + " x ");
+      
+      
       //jTextAreaTelaOperacoes.setText(jTextAreaTelaOperacoes.getText() + "\n");
+      
     }//GEN-LAST:event_jButtonMultiplicacaoActionPerformed
 
     private void jButtonDivisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDivisaoActionPerformed
@@ -531,6 +539,7 @@ public class TelaCalc extends javax.swing.JFrame {
       jTextAreaVisor.setText("");
       jTextAreaTelaOperacoes.setText(calculo.getNum1() + " R ");
       //jTextAreaTelaOperacoes.setText(jTextAreaTelaOperacoes.getText() + "\n");
+      
     }//GEN-LAST:event_jButtonRaizActionPerformed
 
     private void jButtonHistoricoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHistoricoActionPerformed

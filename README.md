@@ -19,7 +19,7 @@
 <img style="float: right;" src="CalculadoraUML.jpg">
 
 
-> ### Ferramentas & Linguagens 💻
+> ### Ferramentas 💻
 
 Ferramentas   | %
 --------- | ------

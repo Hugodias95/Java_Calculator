@@ -5,6 +5,7 @@
 package br.com.projetocalc.model;
 
 import java.io.FileWriter;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -106,8 +107,9 @@ public class CalculadoraModel {
     
      //Métodos
 
-public String calcular(){
-    switch(calculo){
+    
+    public String calcular() {
+        switch(calculo){
         case 1  :
             numAux1= Double.parseDouble(num1)+Double.parseDouble(num2);
             return String.valueOf(numAux1);
@@ -115,34 +117,59 @@ public String calcular(){
            
            
         case 2  :
-         numAux1= Double.parseDouble(num1)-Double.parseDouble(num2);
-         return String.valueOf(numAux1);
+            numAux1= Double.parseDouble(num1)-Double.parseDouble(num2);
+            return String.valueOf(numAux1);
          
          
          case 3  :
-         numAux1= Double.parseDouble(num1)*Double.parseDouble(num2);
-         return String.valueOf(numAux1);
+            numAux1= Double.parseDouble(num1)*Double.parseDouble(num2);
+            return String.valueOf(numAux1);
          
          case 4  :
-         numAux1= Double.parseDouble(num1)/Double.parseDouble(num2);
+             
+             try {
+                 if (Double.parseDouble(num2) != 0) {
+                     numAux1= Double.parseDouble(num1)/Double.parseDouble(num2);
+                 } else {
+                     JOptionPane.showMessageDialog(null, "Oops! não é possível dividir por 0...");
+                 }
+ 
+                
+         } catch (Exception e) {
+                 
+         }
+         
          return String.valueOf(numAux1);
 
          
          case 5  :
-         numAux1= Math.pow(Double.parseDouble(num1), Double.parseDouble(num2)) ;
-         return String.valueOf(numAux1);
+            numAux1= Math.pow(Double.parseDouble(num1), Double.parseDouble(num2)) ;
+            return String.valueOf(numAux1);
          
          case 6 :
              
-             if(Double.valueOf(num1) < 0 ){
+            if(Double.valueOf(num1) < 0 ){
            
-            numAux1= Math.abs(Math.sqrt(Double.valueOf(numAux1)));
-            return String.valueOf(numAux1);
+            //numAux1= Math.abs(Math.sqrt(Double.valueOf(numAux1)));
+            return "Não existe raiz de número negativo, use um número real.";
             
-        }
+        } else {
              numAux1= Math.sqrt(Double.parseDouble(num1));    
              return String.valueOf(numAux1);
+            }
 }
+             
+             /*try {
+                 if(Double.valueOf(num1) >= 0){
+                 numAux1= Math.sqrt(Double.parseDouble(num1));    
+                 } else{
+                     JOptionPane.showMessageDialog(null, "Não existe raiz de número negativo.");
+                     
+                 }
+                 
+             } catch (Exception e) {
+             }*/
+            
     return "";
 }
 
